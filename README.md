@@ -1,296 +1,186 @@
-# 🇮🇳 PM Internship Recommendation Engine
+# 🇮🇳 Internship Engine Using Machine Learning
 
-Current Date and Time: 2025-01-27 19:18:15 UTC | User: shreyasraut0707
+## 📌 Project Overview
+
+The **Internship Engine Using Machine Learning** is a full-stack web application designed to help students discover suitable internship opportunities under the **Prime Minister's Internship Scheme (Government of India)**.
+
+The system recommends internships based on a student's education background, skills, preferred location, and stipend expectations using a **machine learning–based text similarity approach**.
+
+This project was developed as a **self-built, hackathon-ready solution**, focusing on practical usability, clean architecture, and real-world relevance.
 
 ---
 
-## 🚀 Technology & Links
+## 🎯 Objective
 
-🇮🇳 [PM Internship Scheme - Government of India](https://pminternship.mca.gov.in/)
+* Help students easily find relevant PM Internship opportunities
+* Reduce manual searching and mismatched applications
+* Provide intelligent, personalized internship recommendations
+* Support the **Digital India** & **Youth Empowerment** initiative
 
-💻 Tech Stack:
+---
 
-- [Python 3.8+](https://python.org) - Backend Development
-- [Flask 2.0+](https://flask.palletsprojects.com/) - Web Framework
-- [JavaScript ES6+](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Frontend Logic
-- [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML) & [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - UI Design
-- [Scikit-Learn](https://scikit-learn.org/) - Machine Learning
-- [TF-IDF Algorithm](https://en.wikipedia.org/wiki/Tf%E2%80%93idf) - Recommendation Engine
-
-🏆 Project Status: [Hackathon Ready](https://github.com/shreyasraut0707) ✅
-
-## 🎯 Project Overview
-
-An intelligent recommendation system for the Prime Minister's Internship Scheme that matches students with relevant internship opportunities based on their educational background, skills, and preferences. Built for hackathon excellence with real-world application potential.
-
-## ✨ Key Features
-
-### 🎓 Smart Education-Based Matching
-
-- 12+ Education Fields supported (Computer Science, Mechanical, Civil, Commerce, etc.)
-- Dynamic skill suggestions based on selected field
-- Field-specific internship recommendations
-
-### 🤖 AI-Powered Recommendation Engine
-
-- TF-IDF Algorithm for intelligent matching
-- Multi-criteria filtering (location, stipend, skills)
-- Personalized scoring system
-
-### 🏢 Comprehensive Database
-
-- 200+ PM Internship opportunities
-- 50+ Top Indian companies (TCS, Infosys, Google, Microsoft, Tata Motors, etc.)
-- Real company career page integrations
-
-### 🎨 Professional UI/UX
-
-- Responsive design for all devices
-- Government PM Scheme branding
-- Interactive skill selection
-- Real-time form validation
-
-## 🛠️ Technology Stack
+## ⚙️ Tech Stack
 
 ### Backend
 
-- Python 3.8+
-- Flask 2.0+ - REST API framework
-- Pandas - Data processing
-- Scikit-learn - Machine learning algorithms
-- Flask-CORS - Cross-origin resource sharing
+* Python 3.8+
+* Flask (REST API)
+* Pandas (data processing)
+* Scikit-learn (TF-IDF & cosine similarity)
+* Flask-CORS
 
 ### Frontend
 
-- HTML5 - Semantic markup
-- CSS3 - Modern styling with gradients & animations
-- JavaScript ES6+ - Interactive functionality
-- Font Awesome - Professional icons
-- Responsive Grid - Mobile-first design
+* HTML5
+* CSS3 (responsive design)
+* JavaScript (ES6)
+* Font Awesome icons
 
-### Data
+### Data & ML
 
-- CSV Database - 200+ internship records
-- Real company URLs - Direct career page links
-- Government portal integration
+* CSV-based internship dataset
+* TF-IDF vectorization
+* Cosine similarity for matching
+
+---
+
+## ✨ Key Features
+
+* Education-based internship filtering
+* Skill-based intelligent matching
+* Location & stipend preference support
+* TF-IDF powered recommendation engine
+* Match percentage scoring
+* Direct links to company career pages
+* Responsive and user-friendly UI
+
+---
+
+## 🧠 Recommendation Logic (Simplified)
+
+1. User profile (education + skills) is converted into text
+2. Internship descriptions are vectorized using **TF-IDF**
+3. **Cosine similarity** is calculated between user profile and internships
+4. Internships are ranked based on relevance + filters
+5. Top recommendations are returned to the user
+
+---
+
+## 🏢 Supported Domains
+
+* Computer Science / IT
+* Mechanical Engineering
+* Civil Engineering
+* Electronics & Electrical
+* Commerce / Finance
+* Business & Management
+* Marketing & Digital Media
+* HR & Psychology
+* Design & Creative Fields
+* Operations & Logistics
+
+---
 
 ## 📁 Project Structure
 
 ```
 pm-internship-engine/
 ├── backend/
-│   ├── app.py                 # Flask application
-│   ├── recommendation_engine.py  # ML recommendation logic
-│   └── requirements.txt       # Python dependencies
+│   ├── app.py
+│   ├── recommendation_engine.py
+│   └── requirements.txt
 ├── frontend/
-│   ├── index.html            # Main HTML page
-│   ├── style.css             # Styling
-│   ├── mobile.css            # Mobile responsiveness
-│   └── script.js             # JavaScript functionality
+│   ├── index.html
+│   ├── style.css
+│   ├── mobile.css
+│   └── script.js
 ├── data/
-│   └── internship.csv        # Internship database (200+ records)
-└── README.md                 # Project documentation
+│   └── internship.csv
+└── README.md
 ```
 
-## 🚀 Quick Start
+---
+
+## 🚀 Installation & Setup
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- Modern web browser
-- Internet connection
+* Python 3.8 or above
+* Web browser
 
-### Installation & Setup
+### Steps
 
 1. Clone the repository
 
 ```bash
-git clone https://github.com/shreyasraut0707/pm-internship-engine.git
-cd pm-internship-engine
+git clone https://github.com/manojkumar1502/Internship-Engine-Using-Machine-Learning.git
+cd Internship-Engine-Using-Machine-Learning
 ```
 
-2. Install Python dependencies
+2. Install backend dependencies
 
 ```bash
 cd backend
 pip install -r requirements.txt
 ```
 
-3. Start the Flask backend
+3. Start Flask server
 
 ```bash
 python app.py
 ```
 
-4. Open the frontend
+4. Open frontend
 
 ```bash
 cd ../frontend
-# Open index.html in your browser or use live server
+open index.html
 ```
 
-5. Access the application
+---
 
-- Frontend: `http://localhost:3000` (or your live server port)
-- Backend API: `http://localhost:5000`
-
-## 🎯 How It Works
-
-### 1. User Input
-
-- Select education field (Computer Science, Mechanical, etc.)
-- Choose relevant skills (auto-updated based on field)
-- Set location preference
-- Specify minimum stipend
-
-### 2. AI Processing
-
-- TF-IDF vectorization of user profile
-- Cosine similarity calculation with internship database
-- Multi-criteria scoring algorithm
-- Top-N recommendation selection
-
-### 3. Results & Application
-
-- Display personalized internship recommendations
-- Show match percentage for each opportunity
-- Direct redirect to company career pages
-- PM Internship portal integration
-
-## 📊 Database Coverage
-
-### Education Fields (12)
-
-- Computer Science/IT
-- Electronics/Electrical Engineering
-- Mechanical Engineering
-- Civil Engineering
-- Business/Management
-- Commerce/Finance/Accounting
-- Arts/Humanities/Literature
-- Design/Fine Arts/Creative
-- Media/Communication/Journalism
-- Marketing/Sales/Digital Marketing
-- Human Resources/Psychology
-- Operations/Supply Chain/Logistics
-
-### Companies (50+)
-
-- Technology: TCS, Infosys, Google, Microsoft, Amazon, IBM
-- Manufacturing: Tata Motors, Mahindra, Bajaj Auto, BHEL
-- Finance: HDFC Bank, ICICI Bank, SBI, JPMorgan Chase
-- Media: Times of India, Hindustan Times, NDTV
-- E-commerce: Flipkart, Zomato, Swiggy, BigBasket
-
-## 🏆 Hackathon-Ready Features
-
-### Technical Excellence
-
-- ✅ Full-stack implementation (Frontend + Backend + AI)
-- ✅ RESTful API design
-- ✅ Machine learning integration
-- ✅ Responsive UI/UX
-- ✅ Error handling & validation
-
-### Business Impact
-
-- ✅ Real-world problem solving (PM Internship Scheme)
-- ✅ Government initiative alignment
-- ✅ Scalable architecture
-- ✅ Industry partnerships potential
-
-### Innovation
-
-- ✅ Dynamic skill matching by education field
-- ✅ Multi-criteria recommendation algorithm
-- ✅ Real company integration
-- ✅ Government portal connectivity
-
-## 🔧 API Endpoints
+## 🔌 API Endpoints
 
 ### Health Check
 
 ```
 GET /health
-Response: {"status": "healthy", "timestamp": "..."}
 ```
 
-### Get Recommendations
+### Get Internship Recommendations
 
 ```
 POST /api/recommendations
 Content-Type: application/json
+```
 
-Body:
+#### Request Body
+
+```json
 {
   "education": "Computer Science",
   "skills": ["Python", "Web Development"],
-  "location_preference": "bangalore",
+  "location_preference": "Bangalore",
   "min_stipend": 20000
-}
-
-Response:
-{
-  "success": true,
-  "recommendations": [...],
-  "count": 10
 }
 ```
 
-## 🎨 UI/UX Highlights
+---
 
-- Government branding with orange/saffron color scheme
-- Interactive skill tags with hover effects
-- Real-time form validation
-- Loading animations and success notifications
-- Mobile-responsive design
-- Professional card layouts for recommendations
+## 🚧 Future Enhancements
 
-## 🚀 Future Enhancements
-
-- [ ] User authentication system
-- [ ] Save/bookmark internships
-- [ ] Application tracking dashboard
-- [ ] Company profile pages
-- [ ] Advanced filters (duration, start date)
-- [ ] Email notifications
-- [ ] Mobile app development
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Developer
-
-Shreyas Raut (@shreyasraut0707)
-
-- 🎓 Passionate about connecting students with opportunities
-- 🏛️ Supporting Government of India's PM Internship Scheme
-- 🚀 Building technology for social impact
-
-## 🙏 Acknowledgments
-
-- Government of India - PM Internship Scheme initiative
-- Ministry of Corporate Affairs - Official program support
-- Indian IT Industry - Partnership and opportunities
-- Open Source Community - Tools and frameworks
-
----    
-
-## 🇮🇳 Supporting Digital India Initiative
-
-This project aligns with the Government of India's vision of empowering youth through technology and creating employment opportunities for the digital age.
-
-Built with ❤️ for India's future workforce
+* User login & profiles
+* Save/bookmark internships
+* Application tracking
+* Advanced filters (duration, start date)
+* Email notifications
+* Mobile app version
 
 ---
 
-🏆 Ready to change the future of internships in India! 🚀
+## 👨‍💻 Developer
+
+**Manoj Kumar Patil**
+Engineering Student
+Interested in **Full-Stack Development** & **Applied Machine Learning**
+Focused on building **practical solutions for students**
